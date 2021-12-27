@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -13,6 +14,7 @@ body{
     min-height: 100vh;
 }
 
+/* Main Card Box */
 .card{
     position: relative;
     width: 260px;
@@ -51,13 +53,14 @@ body{
 }
 
 
-
+/* Image */
 .card img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Hide Content */
 .card .main-content{
     background: linear-gradient(to top,#171010,transparent);
     padding: 15px;
@@ -72,15 +75,18 @@ body{
     color: white;
     transform: translateY(100%);
     transition: 0.5s;
-
 }
 
+
+/* Heading inside content */
 .card .main-content h1{
     text-transform: capitalize;
 	color: rgb(250, 251, 251);
     font-family: 'Dancing Script', cursive;
     text-align: center;
 }
+
+/* Line above Paragraph */
 .card .main-content hr{
     width: 30%;
     margin: 10px auto;
@@ -89,12 +95,13 @@ body{
     background-color: white;
 }
 
+/* Paragraph */
 .card .short-text p{
     font-size: 15px;
     text-align: center;
 }
 
-
+/* Button More */
 .card .short-text a{
     position: relative;
     text-decoration: none;
@@ -116,6 +123,7 @@ body{
 
 }
 
+/* Create line under button more */
 .card .short-text a::before{
     content: "";
     position: absolute;
@@ -127,18 +135,24 @@ body{
     transition: .2s;
 }
 
+
+/* Make the line 100% on its Width  */
 .card .short-text a:hover:before{
     width: 100%;
 
 }
 
+/* Hide The Content */
 .card:hover:before{
     transform: translateY(200%);
 }
 
+/* Show the Hide Content */
 .card:hover .main-content{
     transform: translateY(0);
 }
+
+/* Hide Overlay Layer */
 .card:hover::after{
     display: none;
 }
