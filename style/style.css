@@ -54,10 +54,12 @@ body{
 
 
 /* Image */
-.card img{
+.card > img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: .5s;
+    
 }
 
 /* Hide Content */
@@ -155,4 +157,9 @@ body{
 /* Hide Overlay Layer */
 .card:hover::after{
     display: none;
+}
+
+/* Add a filter on image */
+.card:hover > img{
+    filter:grayscale(80%)
 }
